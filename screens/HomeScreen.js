@@ -78,6 +78,13 @@ const HomeScreen = () => {
                                         className="flex-1 justify-center items-center w-24 rounded-3xl py-3 mr-4"
                                         style={{ backgroundColor: theme.bgWhite(0.15) }}
                                     >
+                                        <Image source={{ uri: "https:" + item?.day?.conditio?.icon }}
+                                            className="h-11 w-11"
+                                        ></Image>
+                                        <Text className="text-white">{dayName}</Text>
+                                        <Text className = "text-white text-xl font-semibold">
+                                            {item?.day?.avgtemp_c}&#176;
+                                        </Text>
 
                                     </View>
                                 ) 
