@@ -15,6 +15,8 @@ const apiCall = async (URL) => {
     }
 }
 
+
+// Public Data
 export const fetchWeatherForecast = params => {
     return apiCall(apiURL(params));
 }
