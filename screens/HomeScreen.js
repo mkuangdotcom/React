@@ -1,6 +1,9 @@
-import { View, Text, SafeAreaView } from 'react-native'
-import React, { useEffect } from 'react'
-import { fetchWeatherForecast } from '../api/weather';
+import { View, Text, StatusBar, Image, SafeAreaView, ScrollView } from 'react-native'
+import React, { useState, useEffect } from 'react'
+import { CalendarDaysIcon} from 'react-native-heroicons/outline'
+import { fetchWeatherForecast } from '../api/weather'
+import * as ProgressEvent from 'react-native-progress';
+
 
 const HomeScreen = () => {
     const [weathher, setWeather] = useState({})
@@ -92,12 +95,9 @@ const HomeScreen = () => {
                         }
                            
                     </ScrollView>
-
-
                 </SafeAreaView>
             )
         }
-      <Text>HomeScreen</Text>
     </View>
   )
 }
