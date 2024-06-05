@@ -50,7 +50,19 @@ const HomeScreen = () => {
                                 className="w-40 h-40"  
                             />                      
                         </View>
+
+                        {/* degree Celsius  */}
+                        <View>
+                            <Text className="text-center text-white font-bold text-6xl ml-5">
+                                {current?.temp_c}&#176;
+                            </Text>
+                            <Text className="flex-row items-center mx-5">
+                                {current?.condition.text}
+                            </Text>
+                        </View>
                     </View>
+
+                    
                 </SafeAreaView>
             )
         }
