@@ -62,7 +62,31 @@ const HomeScreen = () => {
                         </View>
                     </View>
 
-                    
+                    <ScrollView
+                        horizontal
+                        currentContainerStyle={{ paddingHorizontal: 15 }}
+                        showsHorizontalScrollIndicator={false}
+                    >
+                        {
+                            forecast?.forecastday?.map((item, index) => {
+                                let date = new Date(item.date);
+                                let options = { weekday: 'long' };
+                                let dayName = date.toLocaleDateString('en-US', options);
+                                return (
+                                    <View
+                                        key={index}
+                                        className="flex-1 justify-center items-center w-24 rounded-3xl py-3 mr-4"
+                                        style={{ backgroundColor: theme.bgWhite(0.15) }}
+                                    >
+
+                                    </View>
+                                ) 
+                            })
+                        }
+                           
+                    </ScrollView>
+
+
                 </SafeAreaView>
             )
         }
