@@ -36,12 +36,20 @@ const HomeScreen = () => {
             ) : (
                 <SafeAreaView className="flex-1 mt-12">
                     <View className="justify-around flex-1 my-12">
+                        {/* location */}
                         <Text className="text-white text-center text-2x1 font-bold mt-12">
                             {location?.name}
                             <Text className="text-lg font-semibold text-gray-300">
                                 {", " + location?.country}
                             </Text>
                         </Text>
+
+                        {/* weather image */}
+                        <View>
+                            <Image source={{ url: "https:" + current?.condition.icon}} 
+                                className="w-40 h-40"  
+                            />                      
+                        </View>
                     </View>
                 </SafeAreaView>
             )
